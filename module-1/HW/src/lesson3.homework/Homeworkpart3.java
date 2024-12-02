@@ -5,10 +5,10 @@ import java.util.Scanner;
  class HomeWorkPart3 {
   public static void main(String[] args) {
     calculateParity();
-    //calculateTemperaure();
-    //calculateCube();
-    //writeSequence();
-    //calculateSum();
+    calculateTemperaure();
+    calculateCube();
+    writeSequence();
+    calculateSum();
   }
 
   // Task 1
