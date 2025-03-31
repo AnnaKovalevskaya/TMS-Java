@@ -1,0 +1,25 @@
+package org.example.entity;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class DeserializeJSON {
+    public static void main(String[] args) {
+        String jsonString = "{\"name\":\"Kate\",\"age\":22,\"subject\":\"Math\"}";
+
+        try {
+            // Создаем ObjectMapper
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            // Десериализуем JSON-строку в объект Student
+            Student student = objectMapper.readValue(jsonString, Student.class);
+
+            // Выводим поля объекта в консоль
+            System.out.println("Name: " + student.getName());
+            System.out.println("Age: " + student.getAge());
+            System.out.println("Subject: " + student.getSubject());
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
